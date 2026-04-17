@@ -214,3 +214,8 @@ Xem thêm: [Tài liệu triển khai Next.js](https://nextjs.org/docs/app/buildi
 - Trang `/seed-auth` dùng để tạo tài khoản admin mặc định trong quá trình phát triển — **xoá hoặc bảo vệ route này trước khi deploy lên production**.
 - Firestore Security Rules mặc định ở chế độ test cho phép đọc/ghi tự do — hãy thiết lập rules phù hợp trước khi ra mắt.
 - Tính năng in hoá đơn POS sử dụng `window.print()` với CSS in nhiệt — hoạt động tốt nhất với khổ giấy 80mm.
+- 👤 Thông tin tác giả
+
+Tác giả: Phan Văn Hiển
+
+Email: PhanHien00001@gmail.
