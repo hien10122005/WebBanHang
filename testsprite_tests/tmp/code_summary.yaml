@@ -1,0 +1,50 @@
+version: "2"
+type: frontend
+tech_stack:
+  - language: TypeScript
+  - framework: Next.js
+  - ui_library: React
+  - other: TailwindCSS
+routes:
+  - path: /login
+    file: src/app/login/page.tsx
+    auth_required: false
+    description: User login page
+  - path: /reports
+    file: src/app/(app)/reports/page.tsx
+    auth_required: true
+    description: Reports dashboard
+  - path: /settings
+    file: src/app/(app)/settings/page.tsx
+    auth_required: true
+    description: Application settings page
+features:
+  - name: User Login
+    description: Login with email and password credentials
+    files:
+      - src/app/login/page.tsx
+      - src/lib/auth-context.tsx
+    entry_route: /login
+    user_interactions:
+      - Fill email input field
+      - Fill password input field
+      - Click Login button to submit
+      - See error message on invalid credentials
+    api_calls:
+      - method: POST
+        endpoint: /api/auth/login
+    auth_required: false
+  - name: View Reports
+    description: Display analytics and reports
+    files:
+      - src/app/(app)/reports/page.tsx
+    entry_route: /reports
+    user_interactions:
+      - Navigate to Reports page
+      - View charts and tables
+    api_calls: []
+    auth_required: true
+known_limitations:
+  - issue: Some admin CRUD UI not connected to backend API
+    location: src/app/(app)/admin/page.tsx
+    impact: Operations only affect local state
